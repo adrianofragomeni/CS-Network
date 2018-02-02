@@ -85,7 +85,7 @@ def statistics_by_conf(G_sub, conf):
 # This funcion creates a plot showing the main node (i.e. the input author), and 
 # the adjacent nodes (with hop distance equal to the input d previously mentioned)
 def create_graph_by_auth(node,G_def):
-
+    starter=node
     Hd=hd.Hop_Dist(G_def)
 # Divide all nodes in 4 groups by the hop distance level of the input node
     first_node=Hd.hop_distance(1, node)
@@ -130,7 +130,7 @@ def create_graph_by_auth(node,G_def):
             width=0.5,
             style='dotted',
             alpha=0.9)
-    fig.suptitle('Subgraph of level of hop distance from %s. ' %(node), fontsize=14, fontweight='bold', color='firebrick')
+    fig.suptitle('Subgraph of level of hop distance from %s. ' %(starter), fontsize=14, fontweight='bold', color='firebrick')
     red_patch = mpatches.Patch(color='red', label='d=1')
     lightcoral_patch = mpatches.Patch(color='lightcoral', label='d=2')
     orchid_patch = mpatches.Patch(color='orchid', label='d=3')
