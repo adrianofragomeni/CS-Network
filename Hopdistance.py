@@ -20,7 +20,7 @@ class Hop_Dist():
             lst_connect=node_connection
 # Case 1: when the step is one
         elif step==1:
-            connection=self.graph.neighbors(node)
+            connection=list(self.graph.neighbors(node))
             lst_connect=node_connection+connection
 # Case 3: when the step is more than 1
         else:
