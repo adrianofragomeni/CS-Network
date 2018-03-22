@@ -70,7 +70,7 @@ def statistics_by_conf(G_sub, conf):
     plt.hist(list(Betw_centrality.values()), bins, normed=True,  facecolor='turquoise', alpha=0.50)
     plt.xlabel('Centrality')
     plt.ylabel('Frequency')
-    plt.title('Statistic about graph of the conference: ' + str(conf))
+    plt.title('Statistics of the conference graph: ' + str(conf))
     gold_patch = mpatches.Patch(color='gold', label='Degree centrality',alpha=0.50)
     orchid_patch = mpatches.Patch(color='orchid', label='Closness centrality',alpha=0.50)
     turquoise_patch = mpatches.Patch(color='turquoise', label='Betweenness centrality',alpha=0.50)
@@ -159,7 +159,7 @@ def create_plot_shorter_path(G,tup_node):
     label={node:gf.Id_name(G_dij,node) for node in G_dij.nodes()}
     nx.draw_networkx_labels(G_dij,pos,label,font_size=8)
     nx.draw_networkx_edges(G_dij, pos, edge_color='r', style='dotted' ,arrows=True)
-    fig.suptitle('Shorter Path between : ' + str(gf.Id_name(G_dij,tup_node[1][0]))
+    fig.suptitle('The Shortest Path between : ' + str(gf.Id_name(G_dij,tup_node[1][0]))
     + ' and ' +str(gf.Id_name(G_dij,tup_node[1][-1])), fontsize=14, fontweight='bold', color='firebrick')
     
     ax.set_title( 'Cost = ' + str(weight), color='red')
